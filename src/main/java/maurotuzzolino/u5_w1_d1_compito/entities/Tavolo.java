@@ -5,10 +5,10 @@ public class Tavolo {
     private int maxCoperti;
     private boolean occupato;
 
-    public Tavolo(int numero, int maxCoperti) {
+    public Tavolo(int numero, int maxCoperti, boolean occupato) {
         this.numero = numero;
         this.maxCoperti = maxCoperti;
-        this.occupato = false;
+        this.occupato = occupato;
     }
 
     public int getNumero() {

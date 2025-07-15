@@ -4,6 +4,7 @@ import maurotuzzolino.u5_w1_d1_compito.entities.Bevanda;
 import maurotuzzolino.u5_w1_d1_compito.entities.Menu;
 import maurotuzzolino.u5_w1_d1_compito.entities.Pizza;
 import maurotuzzolino.u5_w1_d1_compito.entities.Topping;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,6 +12,14 @@ import java.util.Arrays;
 
 @Configuration
 public class PizzeriaConfig {
+
+    @Value("${coperto.prezzo}")
+    private double prezzoCoperto;
+
+    @Bean
+    public Double prezzoCoperto() {
+        return prezzoCoperto;
+    }
 
     @Bean
     public Topping prosciutto() {
